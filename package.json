@@ -1,0 +1,13 @@
+{
+  "name": "haraka-plugin-access-auth",
+  "version": "1.0.0",
+  "description": "Haraka plugin for access control by username",
+  "main": "index.js",
+  "keywords": [
+    "haraka",
+    "plugin",
+    "template"
+  ],
+  "author": "Christian Vaas <chrisvaas@gmail.com>",
+  "license": "MIT"
+}
