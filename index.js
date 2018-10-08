@@ -4,7 +4,7 @@ exports.register = function () {
 
 exports.load_access_auth_ini = function () {
   const plugin = this;
-  plugin.cfg = plugin.config.get('acces_auth.ini', function () {
+  plugin.cfg = plugin.config.get('access_auth.ini', function () {
     plugin.load_access_auth_ini();
   });
   plugin.cfg.acl = plugin.cfg.acl || {}
