@@ -3,18 +3,14 @@ exports.register = function () {
 }
 
 exports.load_access_auth_ini = function () {
-  const plugin = this;
-  plugin.cfg = plugin.config.get('access_auth.ini', function () {
-    plugin.load_access_auth_ini();
-  });
-  plugin.cfg.acl = plugin.cfg.acl || {}
+  this.cfg = this.config.get('access_auth.ini', this.load_access_auth_ini);
+  this.cfg.acl = this.cfg.acl || {}
 }
 
 exports.hook_mail = function (next, connection, params) {
-  const plugin = this;
   const mail_from = params[0];
   const auth_user = connection.notes.auth_user
-  const authorized = (plugin.cfg.acl[auth_user] || '').split(',')
+  const authorized = (this.cfg.acl[auth_user] || '').split(',')
     .map(itm => itm.trim())
     .reduce((acc, itm) => acc || itm === mail_from.address(), auth_user === mail_from.address())
 
