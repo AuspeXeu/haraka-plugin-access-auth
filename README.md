@@ -2,6 +2,8 @@
 
 # haraka-plugin-access-auth
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AuspeXeu/haraka-plugin-access-auth.svg)](https://greenkeeper.io/)
+
 This plugin expects the usernames used for authentication to be the email address they are authorized to send emails from. For example `user1@domain.com` can only send emails from his own address but not `user2@domain.com`.
 
 Configuration
